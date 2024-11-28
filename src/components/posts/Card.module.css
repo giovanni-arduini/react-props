@@ -16,7 +16,16 @@
 }
 
 .title {
-  margin-bottom: 1rem;
+  margin-bottom: 0;
+}
+
+.cardTag {
+  margin-right: 0.2rem;
+  padding: 0 0.5rem;
+  background-color: chocolate;
+  border-radius: 2rem;
+  color: white;
+  line-height: 2rem;
 }
 
 .description {

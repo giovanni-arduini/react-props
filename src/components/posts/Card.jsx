@@ -1,8 +1,11 @@
 import image from "../../assets/images.png";
 import Button from "../UI/button/button";
 import style from "./Card.module.css";
+import { posts } from "../../posts";
 
 export default function card() {
+  const publishedPost = posts.filter((post) => post.published === true);
+  console.log(publishedPost);
   return (
     <div className={style.card}>
       <img className={style.thumbnail} src={image} alt="" />

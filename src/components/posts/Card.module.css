@@ -29,6 +29,24 @@
   line-height: 2rem;
 }
 
+.php {
+  background-color: cornflowerblue;
+  color: black;
+}
+
+.html {
+  background-color: darkorange;
+}
+
+.css {
+  background-color: blue;
+}
+
+.js {
+  background-color: rgb(255, 225, 0);
+  color: black;
+}
+
 .description {
   margin-bottom: 1rem;
 }

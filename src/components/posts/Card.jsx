@@ -29,7 +29,7 @@ export default function card(props) {
     <div className={style.card}>
       <img
         className={style.thumbnail}
-        src={!(props.image === undefined) ? props.image : placeholder}
+        src={props.image ? props.image : placeholder}
         alt=""
       />
 

@@ -1,32 +1,29 @@
 import image from "../../assets/images.png";
 import Button from "../UI/button/button";
 import style from "./Card.module.css";
-import { posts } from "../../posts";
+// import { posts } from "../../posts";
 
-export default function card() {
-  const publishedPost = posts.filter((post) => post.published === true);
-  // console.log(publishedPost);
+export default function card(props) {
+  const tags = props.tags;
 
-  return publishedPost.map((post) => (
+  return (
     <div className={style.card}>
-      <img className={style.thumbnail} src={image} alt="" />
+      <img className={style.thumbnail} src={props.image} alt="" />
 
       <div className={style.body}>
-        <h3 className={style.title}>Titolo del post</h3>
-        <div>
-          {post.tags.map((tag) => (
-            <span className={style.cardTag}>{tag}</span>
+        <h3 className={style.title}>{props.title}</h3>
+        <div key={props.id}>
+          {tags.map((tag) => (
+            <span key={tag} className={style.cardTag}>
+              {tag}
+            </span>
           ))}
         </div>
-        <div className={style.description}>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Assumenda
-          omnis illum doloremque porro sit veniam exercitationem autem animi ab
-          eligendi?
-        </div>
+        <div className={style.description}>{props.description}</div>
         <div>
           <Button />
         </div>
       </div>
     </div>
-  ));
+  );
 }

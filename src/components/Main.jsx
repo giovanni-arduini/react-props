@@ -1,14 +1,25 @@
 import Card from "./posts/card";
+import { posts } from "../posts";
 
 export default function Main() {
+  const publishedPost = posts.filter((post) => post.published === true);
+
   return (
     <main className="page-main">
       <section>
         <div className="container">
           <div className="row">
-            <div className="col-6">
-              <Card />
-            </div>
+            {publishedPost.map((post) => (
+              <div key={post.id} className="col-6">
+                <Card
+                  id={post.id}
+                  title={post.title}
+                  description={post.content}
+                  image={post.image}
+                  tags={post.tags}
+                />
+              </div>
+            ))}
           </div>
         </div>
       </section>

@@ -5,8 +5,9 @@ import { posts } from "../../posts";
 
 export default function card() {
   const publishedPost = posts.filter((post) => post.published === true);
-  console.log(publishedPost);
-  return (
+  // console.log(publishedPost);
+
+  return publishedPost.map((post) => (
     <div className={style.card}>
       <img className={style.thumbnail} src={image} alt="" />
 
@@ -22,5 +23,5 @@ export default function card() {
         </div>
       </div>
     </div>
-  );
+  ));
 }

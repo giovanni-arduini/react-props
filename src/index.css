@@ -42,17 +42,19 @@ body {
 }
 
 .col-12 {
-  display: flex;
-  justify-content: center;
   width: 100%;
+}
+.col-6 {
+  width: 50%;
+}
+.col-4 {
+  width: calc(100% / 3);
 }
 
 footer {
   background-color: rgb(57, 62, 67);
   color: white;
-  position: absolute;
-  left: 0;
-  bottom: 0;
+
   width: 100%;
   text-align: center;
   padding: 2.5rem;

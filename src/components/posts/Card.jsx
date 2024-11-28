@@ -1,5 +1,6 @@
 import Button from "../UI/button/button";
 import style from "./Card.module.css";
+import placeholder from "../../assets/undefined.png";
 
 function getClassByTag(tag) {
   let className;
@@ -26,7 +27,11 @@ export default function card(props) {
 
   return (
     <div className={style.card}>
-      <img className={style.thumbnail} src={props.image} alt="" />
+      <img
+        className={style.thumbnail}
+        src={!(props.image === undefined) ? props.image : placeholder}
+        alt=""
+      />
 
       <div className={style.body}>
         <h3 className={style.title}>{props.title}</h3>
